@@ -1,3 +1,4 @@
+import instanceReader
 class KnapSack(object):
     def __init__(self,n,q,w,valores,tamanhos):
         self.n = n # numero de itens no problema
@@ -41,8 +42,9 @@ class KnapSack(object):
         item = self.n
         tam = self.w
         while anterior != (-1,-1,-1):
-            qt = (tam-anterior[1]) / self.tamanhos[item-1]
-            solucao.append([item,qt])
+            qt = (int) ((tam-anterior[1]) / self.tamanhos[item-1])
+            if(qt != 0):
+                solucao.append([item,qt])
             tam = anterior[1]
             item = anterior[0]
             anterior = pre[item][tam]
@@ -55,10 +57,10 @@ def printMatriz(self,m):
             print(e,end=' ')
         print()
 
-
 if __name__ == '__main__':
-    a = KnapSack(2,10,22,[5,1],[2,1])
+    # #a = KnapSack(2,10,22,[5,1],[2,1])
     #a = KnapSack(2,10,8,[2,1],[3,2])
-    solucao = a.solve()
-    print('Solucao ',str(solucao))
+    #solucao = a.solve()
+    #print('Solucao ',str(solucao))
+    instanceReader.computaTodasInstancias()
 
