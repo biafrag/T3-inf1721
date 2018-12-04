@@ -1,6 +1,6 @@
 from pathlib import Path
 from os import listdir
-import Knapsack as K
+import Knapsack  as K
 
 folder = Path('./Instancias/')
 instances = [folder/fileName for fileName in listdir(folder)]
@@ -14,7 +14,9 @@ def readInstance( fileName, values: list, weights: list ):
             weights += [int(w_i)]
     return int(nElements), int(sackSize)
 
-def computaTodasInstancias():
+
+
+if __name__ == '__main__':
     for instancia in instances:
         weights = []
         values = []

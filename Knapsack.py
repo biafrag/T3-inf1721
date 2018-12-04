@@ -1,4 +1,4 @@
-import instanceReader
+
 class KnapSack(object):
     def __init__(self,n,q,w,valores,tamanhos):
         self.n = n # numero de itens no problema
@@ -57,10 +57,5 @@ def printMatriz(self,m):
             print(e,end=' ')
         print()
 
-if __name__ == '__main__':
-    # #a = KnapSack(2,10,22,[5,1],[2,1])
-    #a = KnapSack(2,10,8,[2,1],[3,2])
-    #solucao = a.solve()
-    #print('Solucao ',str(solucao))
-    instanceReader.computaTodasInstancias()
+
 
